@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2A339521-2FA2-4F4B-8ECB-99483C9AD804}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>XEngine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>G:\Competition;$(WindowsSDK_IncludePath);$(IncludePath)</IncludePath>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>G:\CSC418\XEngine\XEngine\Libaries;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;K_PLUGIN;K_FBXSDK;K_NODLL;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>Libaries\FBX\include\fbxsdk\scene\geometry;Libaries\FBX\include\fbxsdk;Libaries\FBX\include;Libaries;Libaries\glm;Libaries\glm\gtx;Libaries\glm\core;Libaries\glm\gtc;Libaries\Simple OpenGL Image Library\src</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libfbxsdk-md.lib;glew32.lib;glew32s.lib;SOIL.lib;glu32.lib;opengl32.lib;SDL_mixer.lib;SDLmain.lib;SDL.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AudioSource.h" />
+    <ClInclude Include="BasePrimitive.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Cube.h" />
+    <ClInclude Include="CustomAllocator.h" />
+    <ClInclude Include="DrawScene.h" />
+    <ClInclude Include="DrawText.h" />
+    <ClInclude Include="CharactorController.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GetPosition.h" />
+    <ClInclude Include="GlFunctions.h" />
+    <ClInclude Include="glut.h" />
+    <ClInclude Include="iButton.h" />
+    <ClInclude Include="iList.h" />
+    <ClInclude Include="Inspector.h" />
+    <ClInclude Include="iSlider.h" />
+    <ClInclude Include="iTextBox.h" />
+    <ClInclude Include="iTexture.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="MouseInput.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="ObjectLoader.h" />
+    <ClInclude Include="Plane.h" />
+    <ClInclude Include="PlaneCollider.h" />
+    <ClInclude Include="PokemonObject.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Rigidbody.h" />
+    <ClInclude Include="SceneData.h" />
+    <ClInclude Include="SceneObject.h" />
+    <ClInclude Include="SetCamera.h" />
+    <ClInclude Include="Skybox.h" />
+    <ClInclude Include="Sphere.h" />
+    <ClInclude Include="SphereCollider.h" />
+    <ClInclude Include="targa.h" />
+    <ClInclude Include="Terrain.h" />
+    <ClInclude Include="TerrainLoader.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Transform.h" />
+    <ClInclude Include="Utilities.h" />
+    <ClInclude Include="Vector3.h" />
+    <ClInclude Include="ViewScene\targa.h" />
+    <ClInclude Include="XEngine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AudioSource.cpp" />
+    <ClCompile Include="BasePrimtive.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Collider.cpp" />
+    <ClCompile Include="Common.cxx" />
+    <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="DrawScene.cxx" />
+    <ClCompile Include="DrawText.cxx" />
+    <ClCompile Include="CharactorController.cpp" />
+    <ClCompile Include="GetPosition.cxx" />
+    <ClCompile Include="GlFunctions.cxx" />
+    <ClCompile Include="iButton.cpp" />
+    <ClCompile Include="iList.cpp" />
+    <ClCompile Include="Inspector.cpp" />
+    <ClCompile Include="iSlider.cpp" />
+    <ClCompile Include="iTextBox.cpp" />
+    <ClCompile Include="iTexture.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="ObjectLoader.cpp" />
+    <ClCompile Include="Plane.cpp" />
+    <ClCompile Include="PlaneCollider.cpp" />
+    <ClCompile Include="PokemonObject.cpp" />
+    <ClCompile Include="SceneData.cpp" />
+    <ClCompile Include="SceneObject.cpp" />
+    <ClCompile Include="SetCamera.cxx" />
+    <ClCompile Include="Skybox.cpp" />
+    <ClCompile Include="Sphere.cpp" />
+    <ClCompile Include="SphereCollider.cpp" />
+    <ClCompile Include="targa.cxx" />
+    <ClCompile Include="Terrain.cpp" />
+    <ClCompile Include="TerrainLoader.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="Utilities.cpp" />
+    <ClCompile Include="XEngine.cpp" />
+    <ClCompile Include="XEngineDemo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\ReleasePokeball.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="XEngine.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="test.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
